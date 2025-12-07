@@ -1,4 +1,3 @@
-// src/controllers/ticketController.js
 import { pool } from "../db.js";
 
 const VALID_STATUS = ["open", "pending", "resolved"];
@@ -10,7 +9,7 @@ export const listTickets = async (req, res) => {
     let { page = 1, limit = 20, status, priority, search } = req.query;
 
     page = parseInt(page, 10);
-    limit = Math.min(parseInt(limit, 10) || 20, 100); // max 100
+    limit = Math.min(parseInt(limit, 10) || 20, 100); 
 
     const offset = (page - 1) * limit;
 
