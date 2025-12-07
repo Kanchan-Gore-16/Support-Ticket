@@ -1,4 +1,3 @@
-// src/controllers/authController.js
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { pool } from "../db.js";
@@ -105,6 +104,5 @@ export const login = async (req, res) => {
 };
 
 export const me = async (req, res) => {
-  // req.user is set by authMiddleware
   res.json({ user: req.user });
 };
