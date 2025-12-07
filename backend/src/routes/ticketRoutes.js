@@ -1,4 +1,3 @@
-// src/routes/ticketRoutes.js
 import express from "express";
 import {
   listTickets,
