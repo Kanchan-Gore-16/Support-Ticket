@@ -1,9 +1,8 @@
-// src/controllers/statsController.js
 import { pool } from "../db.js";
 
 export const getStats = async (req, res) => {
   try {
-    // 1️⃣ Summary counts in one query
+    // Summary counts in one query
     const summaryResult = await pool.query(
       `
       SELECT
@@ -19,7 +18,7 @@ export const getStats = async (req, res) => {
 
     const summary = summaryResult.rows[0];
 
-    // 2️⃣ Last 7 days ticket creation counts (including today)
+    // Last 7 days ticket creation counts (including today)
     const last7Result = await pool.query(
       `
       WITH days AS (
@@ -43,7 +42,7 @@ export const getStats = async (req, res) => {
     );
 
     const last7Days = last7Result.rows.map((row) => ({
-      date: row.date.toISOString().slice(0, 10), // 'YYYY-MM-DD'
+      date: row.date.toISOString().slice(0, 10),
       count: Number(row.count),
     }));
 
