@@ -1,4 +1,3 @@
-// src/api/stats.js
 import api from "./client";
 
 export const fetchStats = async () => {
