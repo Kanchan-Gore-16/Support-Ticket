@@ -1,4 +1,3 @@
-// src/api/tickets.js
 import api from "./client";
 
 export const fetchTickets = async ({ page, limit, status, priority, search }) => {
