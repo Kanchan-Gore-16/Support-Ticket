@@ -4,6 +4,14 @@
 A full-stack support ticket management system built using **React (Vite)** on the frontend and **Node.js + Express + PostgreSQL** on the backend. The application supports secure authentication, ticket management, auto-refresh, optimistic updates, notes, and a stats dashboard.
 
 ---
+## Deployment Link
+https://demo-five-neon-65.vercel.app
+
+### Demo Credentials
+Email : riya.support@helpdesk.in
+Password : password123
+
+---
 
 ## ✅ Features Overview
 
