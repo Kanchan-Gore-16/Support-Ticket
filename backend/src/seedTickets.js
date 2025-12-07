@@ -1,4 +1,3 @@
-// src/seedTickets.js
 import { pool } from "./db.js";
 import bcrypt from "bcryptjs";
 
@@ -9,7 +8,6 @@ const randomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 const randomInt = (min, max) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
 
-// ✅ Random date: today OR yesterday, with random time
 const randomRecentDate = () => {
   const now = new Date();
   const useYesterday = Math.random() < 0.5;
@@ -32,7 +30,6 @@ const randomRecentDate = () => {
   return d;
 };
 
-// ✅ Indian customers
 const customers = [
   { name: "Amit Sharma", email: "amit.sharma@gmail.com" },
   { name: "Priya Verma", email: "priya.verma@gmail.com" },
@@ -46,7 +43,6 @@ const customers = [
   { name: "Pooja Nair", email: "pooja.nair@gmail.com" },
 ];
 
-// ✅ Support agents (users table)
 const agents = [
   { name: "Riya from Support", email: "riya.support@helpdesk.in" },
   { name: "Ankit from Support", email: "ankit.support@helpdesk.in" },
@@ -54,7 +50,7 @@ const agents = [
   { name: "Meera from Support", email: "meera.support@helpdesk.in" },
 ];
 
-// ✅ Ticket titles & descriptions
+// Ticket titles & descriptions
 const titles = [
   "Unable to login into my account",
   "Payment failed but money deducted",
@@ -81,7 +77,7 @@ const descriptions = [
   "My email is verified but the app still asks for verification.",
 ];
 
-// ✅ Typical support note responses
+// Typical support note responses
 const noteTexts = [
   "Thank you for raising this issue. We are checking the logs and will update you shortly.",
   "We have forwarded this to our technical team. You will get an update soon.",
@@ -93,7 +89,7 @@ const noteTexts = [
   "We have refreshed your account from our side. Please try again in a few minutes.",
 ];
 
-// ✅ Create tables if not exist
+// Create tables if not exist
 const ensureSchema = async () => {
   console.log("🛠 Ensuring database schema exists...");
 
@@ -134,10 +130,10 @@ const ensureSchema = async () => {
     );
   `);
 
-  console.log("✅ Schema ready (users, tickets, notes)");
+  console.log("Schema ready (users, tickets, notes)");
 };
 
-// ✅ Ensure agent users exist
+// Ensure agent users exist
 const ensureAgentsExist = async () => {
   const agentIds = [];
 
@@ -165,16 +161,16 @@ const ensureAgentsExist = async () => {
 
 const main = async () => {
   try {
-    console.log("🔄 Starting seed: creating schema + seeding data...");
+    console.log("Starting seed: creating schema + seeding data...");
 
-    // 0️⃣ Ensure tables exist
+    // Ensure tables exist
     await ensureSchema();
 
-    // 1️⃣ Ensure support agent users exist
+    // Ensure support agent users exist
     const agentIds = await ensureAgentsExist();
     console.log("✅ Agents ready:", agentIds);
 
-    // 2️⃣ Seed tickets + notes
+    //Seed tickets + notes
     for (let i = 0; i < 60; i++) {
       const customer = randomItem(customers);
       const title = randomItem(titles);
@@ -183,7 +179,7 @@ const main = async () => {
       const priority = randomItem(priorities);
       const createdAt = randomRecentDate();
 
-      // Insert ticket with created_at and updated_at (today or yesterday)
+      // Insert ticket with created_at and updated_at 
       const ticketResult = await pool.query(
         `
         INSERT INTO tickets 
