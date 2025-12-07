@@ -26,7 +26,18 @@ A full-stack support ticket management system built using **React (Vite)** on th
 
 ---
 
-### 🧾 Ticket Detail Drawer
+### 🧾 Ticket Detail Drawer<img width="1913" height="910" alt="Register" src="https://github.com/user-attachments/assets/35c18487-f43d-4c64-81d5-24950a0235f3" />
+<img width="1918" height="924" alt="Stats" src="https://github.com/user-attachments/assets/8ef685d9-719a-4767-87a3-225479101966" />
+<img width="1912" height="912" alt="Search" src="https://github.com/user-attachments/assets/3f247a0a-6374-43be-bb29-8acca4634c8d" />
+<img width="1919" height="909" alt="Filters" src="https://github.com/user-attachments/assets/f13c361d-bb02-4a54-891a-b7ac023edc53" />
+<img width="1919" height="916" alt="Inbox" src="https://github.com/user-attachments/assets/3eea4161-9344-40ce-a9e4-75c8a877e320" />
+<img width="1918" height="968" alt="Invalid_Credentials" src="https://git
+hub.com/user-attachments/assets/40e884ce-294a-4955-a547-1536e3cc29ef" />
+<img width="1907" height="968" alt="Login" src="https://github.com/user-attachments/assets/106b6c17-0254-49be-a0e4-ae39d3139c16" />
+<img width="1919" height="924" alt="Side_drawer" src="https://github.com/user-attachments/assets/428fa4d5-aeb5-488f-877c-313b0485f278" />
+<img width="1913" height="910" alt="Register" src="https://github.com/user-attachments/assets/bf3e80c3-6a4f-49f7-ac24-42b33dbd8ee9" />
+
+
 - Full ticket details
 - Change status & priority
 - Notes section:
