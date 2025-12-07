@@ -1,4 +1,3 @@
-// src/pages/StatsPage.jsx
 import { useQuery } from "@tanstack/react-query";
 import { fetchStats } from "../api/stats";
 import { useAuth } from "../context/useAuth";
