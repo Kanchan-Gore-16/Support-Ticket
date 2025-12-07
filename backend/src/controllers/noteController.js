@@ -1,4 +1,3 @@
-// src/controllers/noteController.js
 import { pool } from "../db.js";
 
 // GET /tickets/:id/notes
@@ -6,7 +5,6 @@ export const listNotes = async (req, res) => {
   try {
     const { id } = req.params;
 
-    // Optional: ensure ticket exists and not deleted
     const ticketResult = await pool.query(
       "SELECT id FROM tickets WHERE id = $1 AND deleted_at IS NULL",
       [id]
@@ -56,7 +54,6 @@ export const addNote = async (req, res) => {
       return res.status(404).json({ error: "Ticket not found" });
     }
 
-    // user id from auth middleware
     const userId = req.user.id;
 
     const insertResult = await pool.query(
